@@ -2,10 +2,9 @@
 import subprocess
 import json
 import os
-from web3 import web3
+from web3 import Web3
 from web3.middleware import geth_poa_middleware
 w3.middleware_onion.inject(geth_poa_middleware, layer=0)
-from web3 import Web3, HTTPProvider, TestRPCProvider
 from bit import PrivateKeyTestnet
 from bit.network import NetworkAPI
 from web3.gas_strategies.time_based import medium_gas_price_strategy
@@ -15,7 +14,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Import Mnemonic key from an environment variable
-mnemonic = os.getenv('MNEMONIC', 'lucky ozone slender piano gather virus genuine couple birth pilot emerge narrow stay bread bring')
+mnemonic = os.getenv('MNEMONIC', 'fame size ladder slide betray silver bless wreck raise nose spider metal')
 
 # Create functions that derives the wallet keys 
 def derive_wallets(mnemonic, coin, numderive):
